@@ -1,8 +1,8 @@
-const jwt=require('jsonwebtoken')
+const jwt = require('jsonwebtoken')
 const User = require('../models/User.models')
 
 
-const userSignup =async(req,res)=>{
+const userSignup = async (req, res) => {
     try {
         let user = await User.create(req.body)
         let tokenData = {
@@ -48,4 +48,4 @@ const userLogin = async (req, res) => {
     }
 }
 
-module.exports ={userSignup,userLogin}
+module.exports = { userSignup, userLogin }
